@@ -1,6 +1,6 @@
 const fs = require('fs/promises');
 const path = require('path');
-const copyFolderPath = path.join(__dirname, 'directoryToCopy\\');
+const copyFolderPath = path.join(__dirname, 'files-copy\\');
 const copiedFolderPath = path.join(__dirname, 'files\\');
 
 async function copyDir(directoryPath) {

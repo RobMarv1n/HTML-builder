@@ -11,7 +11,7 @@ async function showFiles(directoryPath) {
     const fileStats = await fs.stat(`${directoryPath + fileWithType.name}`);
     if (fileWithType.isFile()) {
       stdout.write(fileWithType.name.split('.')[0] + ' - ');
-      stdout.write(path.extname(fileWithType.name + ' - '));
+      stdout.write(fileWithType.name.split('.').at(-1) + ' - ');
       stdout.write((fileStats.size / 1024).toFixed(3) + 'kb\n');
     }
   }
